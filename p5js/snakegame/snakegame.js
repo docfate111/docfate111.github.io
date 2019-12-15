@@ -1,14 +1,11 @@
 var lastMove='';
 var food;
 var difficulty=20;
-//let song;
 function setup(){
   createCanvas(70*difficulty, 40*difficulty);
-  //song=loadSound("immortal.mp3");
   s=new Snake();
   setLoc();
   frameRate(10);
-  //song.play();
 }
 function draw(){ 
   background(0);
