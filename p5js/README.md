@@ -3,6 +3,8 @@ above is my professional website below are some fun ones
 js is cool
 click the links to go the websites
 * Websites
+  *  [snakegame](https://docfate111.github.io/p5js/snakegame/index.html) : you know what it is
+  ![The site](https://docfate111.github.io/images/snake.png)
   * [darkcircle](https://docfate111.github.io/p5js/circles/index.html) : follows the mouse and makes a bunch of circles in different shades from white to black
   ![The site](https://docfate111.github.io/images/darkcircle.png)
   * [spacewarp](https://docfate111.github.io/p5js/spacewarp/site.html) : as the mouse moves right the stars blur as we warp speed into deep space
