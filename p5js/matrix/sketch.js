@@ -4,7 +4,7 @@ function setup() {
     window.innerHeight
   );
   l=[];
-  for(var i=0; i<(20*mouseX+100); i++){
+  for(var i=0; i<random(200, 800); i++){
         for(var j=0; j<width; j+=80){
           l.push(new symbol(j));
         }
@@ -20,7 +20,7 @@ function draw() {
 function symbol(x){
   this.x=x;
   this.y=random(-height*3, -height);
-  this.speed=random(80, 140);
+  this.speed=abs(mouseY)*20
   this.a=-5;
   this.randomSymbol=function(){
     return String.fromCharCode(0x30A0+round(random(0, 96)));
