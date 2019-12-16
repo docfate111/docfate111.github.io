@@ -4,7 +4,7 @@ function setup() {
     window.innerHeight
   );
   l=[];
-  for(var i=0; i<random(200, 900); i++){
+  for(var i=0; i<(20*mouseX+100); i++){
         for(var j=0; j<width; j+=80){
           l.push(new symbol(j));
         }
