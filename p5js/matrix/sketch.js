@@ -20,7 +20,7 @@ function draw() {
 function symbol(x){
   this.x=x;
   this.y=random(-height*3, -height);
-  this.speed=abs(mouseY)*20
+  this.speed=abs(mouseY)*40
   this.a=-5;
   this.randomSymbol=function(){
     return String.fromCharCode(0x30A0+round(random(0, 96)));
@@ -33,9 +33,9 @@ function symbol(x){
   this.fall=function(){
     this.y+=this.speed;
     this.speed+=this.a;
-    if(this.speed<=5){
+    /*if(this.speed<=5){
       this.speed+=random(80, 300);
-    }
+    }*/
     if(this.y>height){
       this.y=random(0, height/2);
     }
