@@ -21,3 +21,6 @@ click the links to go the websites
   ![Broken image](https://docfate111.github.io/images/pong.png)
   * [spaceinvaders](https://docfate111.github.io/p5js/spaceinvaders/index.html) : Down arrow to shoot, mouse to move the cannon
   ![Broken image](https://docfate111.github.io/images/invade.png) 
+   * [sticky_squares](https://docfate111.github.io/p5js/stickysquares/index.html) : Use the arrow keys to play really easy tetris. Be careful as the rectangles are extra-sticky!
+  ![Broken image](https://docfate111.github.io/images/sticky.png) 
+  
