@@ -15,6 +15,8 @@ click the links to go the websites
   * [move that mouse](https://docfate111.github.io/p5js/morecircles/index.html) : move your mouse you'll see modern art
   ![Broken image](https://docfate111.github.io/images/colors.png) 
   + Games
+   * [flappysquare](https://docfate111.github.io/p5js/flappysquare/index.html) : tap the up arrow key to flap!
+   ![Broken image](https://docfate111.github.io/images/flap.png)
    * [snakegame](https://docfate111.github.io/p5js/snakegame/index.html) : you know what it is
   ![Broken image](https://docfate111.github.io/images/snake.png)
     * [pong](https://docfate111.github.io/p5js/pong/index.html) : the classic arcade game
