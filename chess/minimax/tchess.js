@@ -22,9 +22,8 @@ function onDrop (source, target) {
   })
   // illegal move
   if (move === null) return 'snapback'
-  updateStatus()
-  window.setTimeout(makeMove, 250)
-  //console.log(game.moves());
+  updateStatus();
+  window.setTimeout(makeMove, 500);
 }
 function makeMove(){
   var possMoves=game.moves();
@@ -32,55 +31,74 @@ function makeMove(){
   if(possMoves.length===0) return 
   //only one possible move
   if (possMoves.length===1) x=possMoves[0];
-  var x=generateMove(possMoves);
   //make move
-  game.move(x);
+  game.move(generateMove("b"));
   //update board
   board.position(game.fen());
 }
-function generateMove(possMoves){
-  var maxMove=possMoves[Math.floor(Math.random() * possMoves.length)];
-  for(var i=0; i<game.moves().length; i++){
+function generateMove(player){
+  var possMoves=game.moves();
+  var bestMove=possMoves[Math.floor(Math.random()*possMoves.length)];
+  var bestScore=Number.NEGATIVE_INFINITY;
+  for(var i=0; i<possMoves.length; i++){
     game.move(possMoves[i]);
-    if(getScore(board)>maxMove){
-     maxMove=possMoves[i];
+    var m=minimax(player, 2, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY, player);
+    if(m>=bestScore){
+      bestScore=m;
+      bestMove=possMoves[i];
+      console.log("oh looks like ive found better move");
     }
     game.undo();
   }
-  return maxMove;
+  return bestMove;
 }
-function getScore(){
+function otherPlayer(a){if(a=="w"){return "b";}return "w";}
+function max(a, b){if(a>b){return a;} return b;}
+function min(a, b){if(a<b){return a;} return b;}
+function minimax(player, depth, alpha, beta, playerMaxingfor){
+  if(depth<1 || game.game_over()){
+    return getScore(playerMaxingfor);
+  }
+  var bestScore;
+  var possMoves=game.moves();
+  if(player==playerMaxingfor){
+      bestScore=Number.NEGATIVE_INFINITY;
+      for(var i=0; i<possMoves.length; i++){
+          game.move(possMoves[i]);
+          player=otherPlayer(player);
+          var eval=minimax(player, depth-1, alpha, beta, playerMaxingfor);
+          game.undo();
+          bestScore=max(eval, bestScore);
+          alpha=max(eval, alpha);
+          if(beta<=alpha){
+            break;
+          }
+      }
+  }else{
+    //other players turn minimize points that other player gets
+    bestScore=Number.POSITIVE_INFINITY;
+    for(var i=0; i<possMoves.length; i++){
+      game.move(possMoves[i]);
+      player=otherPlayer(player);
+      var eval=minimax(player, depth-1, alpha, beta, playerMaxingfor);
+      game.undo();
+      bestScore=min(eval, bestScore);
+      beta=min(eval, beta);
+      if(beta<=alpha){
+        break;
+      }
+    }
+  }
+  return bestScore;
+}
+function getScore(player){
   var sum=0;
   var g=game.board();
   for(let i=0; i<8; i++){
     for(let j=0; j<8; j++){
     if(g[i][j]!=null){
-      if(g[i][j].color==="w"){
-        switch(g[i][j]){
-          case "p":
-            sum-=1;
-            break;
-          case "n":
-            sum-=3;
-            break;
-          case "b":
-            sum-=3;
-            break;
-          case "q":
-            sum-=9;
-            break;
-          case "k":
-            sum-=18;
-            break;
-          case "r":
-            sum-=5;
-            break;
-          default:
-            sum-=0;
-        }
-      }
-      if(g[i][j].color==="b"){
-        switch(g[i][j]){
+      if(g[i][j].color===player){
+        switch(g[i][j].type){
           case "p":
             sum+=1;
             break;
@@ -91,16 +109,39 @@ function getScore(){
             sum+=3;
             break;
           case "q":
-            sum+=9;
+            sum+=8;
             break;
           case "k":
-            sum+=18;
+            sum+=16;
             break;
           case "r":
             sum+=5;
             break;
           default:
             sum+=0;
+        }
+      }else{
+        switch(g[i][j].type){
+          case "p":
+            sum-=1;
+            break;
+          case "n":
+            sum-=3;
+            break;
+          case "b":
+            sum-=3;
+            break;
+          case "q":
+            sum-=8;
+            break;
+          case "k":
+            sum-=16;
+            break;
+          case "r":
+            sum-=5;
+            break;
+          default:
+            sum-=0;
         }
       }
     }
