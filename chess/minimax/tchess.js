@@ -23,7 +23,15 @@ function onDrop (source, target) {
   // illegal move
   if (move === null) return 'snapback'
   updateStatus();
-  window.setTimeout(makeMove, 500);
+  window.setTimeout(makeMove, 50);
+}
+function formatpgn(s){
+  let j=0;
+  while(s.indexOf(".")!=-1){
+    j=s.indexOf(".");
+    s=s.slice(0, j-1)+s.slice(j+2, s.length);
+  }
+  return s;
 }
 function makeMove(){
   var possMoves=game.moves();
@@ -32,7 +40,12 @@ function makeMove(){
   //only one possible move
   if (possMoves.length===1) x=possMoves[0];
   //make move
-  game.move(generateMove("b"));
+  var nextMove=getNextMove(formatpgn(game.pgn()));
+  if(nextMove=='Empty'){
+    game.move(generateMove("b"));
+  }else{
+    game.move(nextMove);
+  }
   //update board
   board.position(game.fen());
 }
@@ -58,7 +71,7 @@ function min(a, b){if(a<b){return a;} return b;}
 function minimax(player, depth, alpha, beta, playerMaxingfor){
   if(depth<1 || game.game_over()){
     //return getPieceScore(playerMaxingfor);
-    return getLocScore(playerMaxingfor)+89*getPieceScore(playerMaxingfor);
+    return getLocScore(playerMaxingfor)+99*getPieceScore(playerMaxingfor);
   }
   var bestScore;
   var possMoves=game.moves();
@@ -169,30 +182,38 @@ var bKnightTable={
 var whiteTable={"p":wPawnTable, "n":wKnightTable, "b":wBishopTable, "r":wRookTable};
 var blackTable={"p":bPawnTable, "n":bKnightTable, "b":bBishopTable, "r":bRookTable};
 var pieceTables={"w":whiteTable, "b":blackTable};
-function convertToCoords(x, y){
-  return String.fromCharCode(y+97)+(8-x);
-}
+var everySquare=['a1','b1','c1','d1','e1','f1','g1','h1',
+'a2','b2','c2','d2','e2','f2','g2','h2','a3','b3','c3','d3','e3','f3',
+'g3','h3','a4','b4','c4','d4','e4','f4','g4','h4',
+'a5','b5','c5','d5','e5','f5','g5','h5','a6','b6','c6','d6','e6','f6',
+'g6','h6','a7','b7','c7','d7','e7','f7','g7','h7','a8','b8','c8','d8','e8','f8','g8','h8'];
 function getLocScore(player){
   var sum=0;
-  var g=game.board();
-  for(let i=0; i<8; i++){
-    for(let j=0; j<8; j++){
-      if((g[i][j]!=null && g[i]!=null)){
-        if("pnbr".includes(g[i][j].type)){
-          sum+=pieceTables[g[i][j].color][g[i][j].type][convertToCoords(i,j)];
-        }}
-  }}
-  console.log(sum);
+  var g;
+  var sq;
+  var arr=everySquare.filter(x=>game.get(x)!=null);
+  //n^2 to n yay!(hardly helps)
+  for(let i=0; i<arr.length; i++){
+      sq=arr[i];
+      g=game.get(sq);
+      //if((g!=null && g!=null)){
+        if("pnbr".includes(g.type)){
+          sum+=pieceTables[g.color][g.type][sq];
+        }
+      //}
+  }
   return sum;
 }
 function getPieceScore(player){
   var sum=0;
-  var g=game.board();
-  for(let i=0; i<8; i++){
-    for(let j=0; j<8; j++){
-    if(g[i][j]!=null){
-      if(g[i][j].color===player){
-        switch(g[i][j].type){
+  var g;
+  var sq;
+  var arr=everySquare.filter(x=>game.get(x)!=null);
+  for(let i=0; i<arr.length; i++){
+    sq=arr[i];
+    g=game.get(sq);
+    if(g.color===player){
+        switch(g.type){
           case "p":
             sum+=1;
             break;
@@ -215,7 +236,7 @@ function getPieceScore(player){
             sum+=0;
         }
       }else{
-        switch(g[i][j].type){
+        switch(g.type){
           case "p":
             sum-=1;
             break;
@@ -237,11 +258,32 @@ function getPieceScore(player){
           default:
             sum-=0;
         }
-      }
     }
-  }}
+  }
   return sum;
 }
+/*var searchController={};
+searchController.nodes;
+searchController.fh;
+searchController.fhf;
+searchController.depth;
+searchController.time;
+searchController.start;
+searchController.stop;
+searchController.best;
+searchController.thinking;
+function searchPosition(){
+  var bestMove;
+  var bestScore=Number.NEGATIVE_INFINITY;
+  var currentDepth=0;
+  for(currentDepth=1; currentDepth<=searchController.depth; ++currentDepth){
+    if(searchController.stop){
+      break;
+    }
+  }
+  searchController.best=bestMove;
+  searchController.thinking=false;
+}*/
 // update the board position after the piece snap
 // for castling, en passant, pawn promotion
 function onSnapEnd () {
