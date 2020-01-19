@@ -1,5 +1,7 @@
 # docfate111.github.io
 
+Main site: https://docfate111.github.io/homepage/index.html
+
 code for my professional website
 
 p5js directory is for my fun websites
