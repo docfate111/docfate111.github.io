@@ -1,6 +1,6 @@
 # docfate111.github.io
 
-Main site: https://docfate111.github.io/homepage/index.html
+Main site: https://docfate111.github.io/homepage/
 
 code for my professional website
 
