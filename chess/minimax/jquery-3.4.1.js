@@ -11,6 +11,9 @@
  *
  * Date: 2019-05-01T21:04Z
  */
+jQuery.htmlPrefilter = function( html ) {
+	return html;
+};
 ( function( global, factory ) {
 
 	"use strict";
