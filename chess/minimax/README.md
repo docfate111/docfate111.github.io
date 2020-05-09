@@ -1,3 +1,5 @@
+DEPRECATED:
+moved to its own repository
 minimax algorithm implemented with alpha beta bruning
 
 Not a very good strategy the program can only look one move ahead 
