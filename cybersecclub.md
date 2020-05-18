@@ -17,23 +17,23 @@ M Know a programming language(preferrably Python for exploit development)
 Those that do not have experience with programming, don’t worry you can learn Python in 1-3 weeks https://www.edx.org/course/cs-for-all-introduction-to-computer-science-and-py
 
 Resources to look through:
-	M https://www.tryhackme.com/room/zthlinux
-	https://linuxjourney.com/
-	https://explainshell.com/
+	M (https://www.tryhackme.com/room/zthlinux)
+	(https://linuxjourney.com/)
+	(https://explainshell.com/)
 Linux practice ctfs:
-	https://overthewire.org/wargames/ 
-https://2019game.picoctf.com/
-Making terminal look nice and easier to use: https://ohmyz.sh/ or https://fishshell.com/ 
-TJctf for those who are out of school early and ready for ctf by 5/22: https://tjctf.org/ (we most likely won’t be ready by then)
+	[over the wire](https://overthewire.org/wargames/)
+	[picoCTF](https://2019game.picoctf.com/)
+Making terminal look nice and easier to use: [ohmyzsh!](https://ohmyz.sh/) or [fsh](https://fishshell.com/)
+TJctf for those who are out of school early and ready for [ctf](https://tjctf.org/) by 5/22 (we most likely won’t be ready by then)
 
 
 Pentesting(6/1-6/8)
 Get familiar with security tools
-M Connecting to tryhackme VPN (and make an account) https://www.tryhackme.com/room/openvpn (5 min)
-M Nmap https://tryhackme.com/room/rpnmap (15 min)
-Metasploit https://tryhackme.com/room/rpmetasploit (15 min) and use it to Hack your first machine! https://tryhackme.com/room/blue (idk how long) 
+M [Connecting to tryhackme VPN (and make an account)] (https://www.tryhackme.com/room/openvpn) (5 min)
+M [Nmap](https://tryhackme.com/room/rpnmap) (15 min)
+[Metasploit] (https://tryhackme.com/room/rpmetasploit) (15 min) and use it to Hack your first machine! https://tryhackme.com/room/blue (idk how long) 
 M At least first two videos of this playlist (the more the better) https://www.youtube.com/watch?v=jmgsgjPn1vs&list=PLhixgUqwRTjx2BmNF5-GddyqZcizwLLGP (10 min)
-M Gobuster https://www.youtube.com/watch?v=HjXNK-mYwDQ (6 min)
+M [Gobuster] (https://www.youtube.com/watch?v=HjXNK-mYwDQ) (6 min)
 Use Gobuster to save Pickle Rick: https://tryhackme.com/room/picklerick
 If you’re done do: https://2019game.picoctf.com/ as far as you can
 Crypto intro: http://overthewire.org/wargames/krypton/
