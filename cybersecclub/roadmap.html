@@ -1,45 +1,80 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>roadmap</title><style></style></head><body id="preview">
+<h1 class="code-line" data-line-start=0 data-line-end=1><a id="Guide_to_CTF_PrepBecoming_a_1337_Hacker_0"></a>Guide to CTF Prep/Becoming a 1337 Hacker</h1>
+<h1 class="code-line" data-line-start=2 data-line-end=3><a id="Prerequisites_2"></a>Prerequisites</h1>
+<p class="has-line-data" data-line-start="3" data-line-end="6">I strongly recommend general programming knowledge.<br>
+If you know C/C++ and/or Assembly-bonus points. You will like reverse engineering and binary exploitation.<br>
+If you know JavaScript, PHP, and/or SQL, you will enjoy web security.</p>
+<h1 class="code-line" data-line-start=7 data-line-end=8><a id="Installing_Linux_Virtual_Machines_7"></a>Installing Linux Virtual Machines</h1>
+<p class="has-line-data" data-line-start="8" data-line-end="11">We use Linux since Kali comes with tools needed for attack-defense and jeopardy CTFs.<br>
+<a href="https://www.youtube.com/watch?v=zA3vmx0GaO8">What is linux?</a><br>
+How to install VM:</p>
+<ul>
+<li class="has-line-data" data-line-start="11" data-line-end="12"><a href="https://phoenixnap.com/kb/how-to-install-kali-linux-on-virtualbox">If you are using a Mac</a></li>
+<li class="has-line-data" data-line-start="12" data-line-end="21"><a href="https://www.nakivo.com/blog/install-kali-linux-vmware/">If you are using Windows</a>
+<ul>
+<li class="has-line-data" data-line-start="13" data-line-end="14"><a href="https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0">get vmware here</a></li>
+<li class="has-line-data" data-line-start="14" data-line-end="15">download kali linux iso x64 from <a href="https://www.kali.org/downloads/">here</a></li>
+<li class="has-line-data" data-line-start="15" data-line-end="16">follow <a href="https://www.kali.org/docs/virtualization/install-vmware-workstation-player-kali-guest-vm/">this guide</a>- make sure you select Debian 9 x64 in vmware</li>
+<li class="has-line-data" data-line-start="16" data-line-end="17">for the rest follow <a href="https://www.youtube.com/watch?v=6vxGZTImkms">this</a> or just choose defaults settings hitting enter until you are done.</li>
+<li class="has-line-data" data-line-start="17" data-line-end="18">If you are on Windows and think VMs are too slow you can install Linux on a USB, dual boot it with Windows, or live install it as your main operating system. Do not try this on macOS however.</li>
+<li class="has-line-data" data-line-start="18" data-line-end="21">Additionally, Windows has <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-index">WSL2</a> if you have to use Linux for coding on Windows.<br>
+Make an account and learn how to connect to <a href="http://TryHackMe.com">TryHackMe.com</a>'s <a href="https://tryhackme.com/room/openvpn">VPN to hack machines they set up for you</a>. You will need to login to this for every “room”.</li>
 </ul>
 </li>
 </ul>
-<h1 class="code-line" data-line-start=20 data-line-end=21 ><a id="Week_1_Lets_Hack_20"></a>Week 1: Let’s Hack!</h1>
-<p class="has-line-data" data-line-start="21" data-line-end="22">If you don’t want to learn general cybersecurity or participate in attack-defense CTFs, skip this week. However, I would recommend for beginners to do this since it is important cybersecurity knowledge, hacking things is fun, and it is similar to what a professional hacker does.</p>
+<h1 class="code-line" data-line-start=21 data-line-end=22><a id="Week_1_Lets_Hack_21"></a><a href=""></a>Week 1: Let’s Hack!</h1>
+<p class="has-line-data" data-line-start="22" data-line-end="23">If you don’t want to learn general cybersecurity or participate in attack-defense CTFs, skip this week. However, I would recommend for beginners to do this since it is important cybersecurity knowledge, hacking things is fun, and it is similar to what a professional hacker does.</p>
 <ul>
-<li class="has-line-data" data-line-start="23" data-line-end="27">Tasks (short videos then a practice lab)<br>
-- Learn <a href="https://www.youtube.com/watch?v=TyUtnOb-kS0">Nmap</a><br>
-- Learn <a href="https://www.youtube.com/watch?v=aRwxsn9ZEQw">Metasploit</a><br>
-- <a href="https://www.youtube.com/watch?v=jmgsgjPn1vs&amp;list=PLhixgUqwRTjx2BmNF5-GddyqZcizwLLGP">Web security intro: first 3 videos of this playlist</a></li>
-<li class="has-line-data" data-line-start="27" data-line-end="28">make a <a href="https://2019game.picoctf.com/">picoCTF</a> account and try some web challenges</li>
-<li class="has-line-data" data-line-start="28" data-line-end="30">if you’re stuck or want to do learn more check out <a href="https://primer.picoctf.com/#_introduction">this resource</a></li>
-</ul>
-<h1 class="code-line" data-line-start=30 data-line-end=31 ><a id="Week_2_Web_and_Privelege_Escalation_Intro_30"></a>Week 2: Web and Privelege Escalation Intro</h1>
+<li class="has-line-data" data-line-start="25" data-line-end="32">
+<p class="has-line-data" data-line-start="25" data-line-end="26">Tasks (short videos then a practice lab)</p>
 <ul>
-<li class="has-line-data" data-line-start="31" data-line-end="32"><a href="https://tryhackme.com/room/vulnversity">hack</a> a webserver</li>
-<li class="has-line-data" data-line-start="32" data-line-end="33"><a href="https://tryhackme.com/room/juiceshop">learn web vulnerabilities</a></li>
-<li class="has-line-data" data-line-start="33" data-line-end="34"><a href="https://www.hacker101.com/videos">watch some videos and try the CTF</a></li>
+<li class="has-line-data" data-line-start="27" data-line-end="29">
+<p class="has-line-data" data-line-start="27" data-line-end="28">Learn <a href="https://www.youtube.com/watch?v=TyUtnOb-kS0">Nmap</a></p>
+</li>
+<li class="has-line-data" data-line-start="29" data-line-end="31">
+<p class="has-line-data" data-line-start="29" data-line-end="30">Learn <a href="https://www.youtube.com/watch?v=aRwxsn9ZEQw">Metasploit</a></p>
+</li>
+<li class="has-line-data" data-line-start="31" data-line-end="32">
+<p class="has-line-data" data-line-start="31" data-line-end="32"><a href="https://www.youtube.com/watch?v=jmgsgjPn1vs&amp;list=PLhixgUqwRTjx2BmNF5-GddyqZcizwLLGP">Web security intro: first 3 videos of this playlist</a></p>
+</li>
 </ul>
-<h1 class="code-line" data-line-start=34 data-line-end=35 ><a id="Week_3_Binary_exploitation_and_reverse_engineering_34"></a>Week 3: Binary exploitation and reverse engineering</h1>
+</li>
+<li class="has-line-data" data-line-start="32" data-line-end="33">
+<p class="has-line-data" data-line-start="32" data-line-end="33">make a <a href="https://2019game.picoctf.com/">picoCTF</a> account and try some web challenges</p>
+</li>
+<li class="has-line-data" data-line-start="33" data-line-end="34">
+<p class="has-line-data" data-line-start="33" data-line-end="34">if you’re stuck or want to do learn more check out <a href="https://primer.picoctf.com/#_introduction">this resource</a></p>
+</li>
+</ul>
+<h1 class="code-line" data-line-start=36 data-line-end=37><a id="Week_2_Web_and_Privelege_Escalation_Intro_36"></a><a href=""></a>Week 2: Web and Privelege Escalation Intro</h1>
 <ul>
-<li class="has-line-data" data-line-start="35" data-line-end="36"><a href="https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN">Intro videos(watch up to at least video 6)</a></li>
-<li class="has-line-data" data-line-start="36" data-line-end="37">Read the first few chapters of <strong><em>Hacking: the Art of Exploitation</em></strong> book</li>
-<li class="has-line-data" data-line-start="37" data-line-end="38">Use buffer overflow to help Pingu <a href="https://www.tryhackme.com/room/thecodcaper">hack</a></li>
-<li class="has-line-data" data-line-start="38" data-line-end="39"><a href="https://www.youtube.com/watch?v=75gBFiFtAb8">Quick intro to x86 assembly</a></li>
+<li class="has-line-data" data-line-start="38" data-line-end="39"><a href="https://tryhackme.com/room/vulnversity">hack</a> a webserver</li>
+<li class="has-line-data" data-line-start="39" data-line-end="40"><a href="https://tryhackme.com/room/juiceshop">learn web vulnerabilities</a></li>
+<li class="has-line-data" data-line-start="40" data-line-end="41"><a href="https://www.hacker101.com/videos">watch some videos and try the CTF</a></li>
 </ul>
-<h1 class="code-line" data-line-start=39 data-line-end=40 ><a id="Week_4_Binary_Exploitation_sometimes_called_Pwn_and_Reverse_Engineering_2_39"></a>Week 4: Binary Exploitation (sometimes called Pwn) and Reverse Engineering 2</h1>
+<h1 class="code-line" data-line-start=43 data-line-end=44><a id="Week_3_Binary_exploitation_and_reverse_engineering_43"></a><a href=""></a>Week 3: Binary exploitation and reverse engineering</h1>
 <ul>
-<li class="has-line-data" data-line-start="40" data-line-end="41"><a href="https://tryhackme.com/room/reverselfiles">an easy rev challenge to practice using objdump, gdb, radare2 or ghidra</a></li>
-<li class="has-line-data" data-line-start="41" data-line-end="42"><a href="https://www.tryhackme.com/room/reverseengineering">a rev challenge that walks through assembly</a></li>
-<li class="has-line-data" data-line-start="42" data-line-end="43">use <a href="http://blog.eadom.net/uncategorized/pwntools-quick-reference-guide/">Pwntools</a> to solve questions labelled “reversing” and “binary exploitation” in the top right in <a href="https://2019game.picoctf.com/">picoCTF</a></li>
+<li class="has-line-data" data-line-start="45" data-line-end="46"><a href="https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN">Intro videos(watch up to at least video 6)</a></li>
+<li class="has-line-data" data-line-start="46" data-line-end="47">Read the first few chapters of <strong>&lt;em&gt;Hacking: the Art of Exploitation&lt;/em&gt;</strong> book</li>
+<li class="has-line-data" data-line-start="47" data-line-end="48">Use buffer overflow to help Pingu <a href="https://www.tryhackme.com/room/thecodcaper">hack</a></li>
+<li class="has-line-data" data-line-start="48" data-line-end="49"><a href="https://www.youtube.com/watch?v=75gBFiFtAb8">Quick intro to x86 assembly</a></li>
 </ul>
-<h1 class="code-line" data-line-start=43 data-line-end=44 ><a id="Week_5_Binary_exploitation_43"></a>Week 5 (Binary exploitation)</h1>
+<h1 class="code-line" data-line-start=51 data-line-end=52><a id="Week_4_Binary_Exploitation_sometimes_called_Pwn_and_Reverse_Engineering_2_51"></a><a href=""></a>Week 4: Binary Exploitation (sometimes called Pwn) and Reverse Engineering 2</h1>
 <ul>
-<li class="has-line-data" data-line-start="44" data-line-end="45"><a href="https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN">continue from video 7 to video 11</a></li>
-<li class="has-line-data" data-line-start="45" data-line-end="46">use the tutorial above to practice what you have learned with <a href="https://exploit.education/">a proper education</a></li>
+<li class="has-line-data" data-line-start="53" data-line-end="54"><a href="https://tryhackme.com/room/reverselfiles">an easy rev challenge to practice using objdump, gdb, radare2 or ghidra</a></li>
+<li class="has-line-data" data-line-start="54" data-line-end="55"><a href="https://www.tryhackme.com/room/reverseengineering">a rev challenge that walks through assembly</a></li>
+<li class="has-line-data" data-line-start="55" data-line-end="56">use <a href="http://blog.eadom.net/uncategorized/pwntools-quick-reference-guide/">Pwntools</a> to solve questions labelled “reversing” and “binary exploitation” in the top right in <a href="https://2019game.picoctf.com/">picoCTF</a></li>
 </ul>
-<h1 class="code-line" data-line-start=46 data-line-end=47 ><a id="Week_6_46"></a>Week 6</h1>
+<h1 class="code-line" data-line-start=58 data-line-end=59><a id="Week_5_Binary_exploitation_58"></a><a href=""></a>Week 5 (Binary exploitation)</h1>
 <ul>
-<li class="has-line-data" data-line-start="47" data-line-end="48"><a href="https://exploit.courses/#/index">follow these tutorials after making an account on hackerlabs to access the materials</a></li>
-<li class="has-line-data" data-line-start="48" data-line-end="49">continue reading <strong><em>Hacking: The Art of Exploitation</em></strong></li>
+<li class="has-line-data" data-line-start="60" data-line-end="61"><a href="https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN">continue from video 7 to video 11</a></li>
+<li class="has-line-data" data-line-start="61" data-line-end="62">use the tutorial above to practice what you have learned with <a href="https://exploit.education/">a proper education</a></li>
 </ul>
-<h1 class="code-line" data-line-start=49 data-line-end=50 ><a id="Week_7_Cryptography_49"></a>Week 7: Cryptography</h1>
-<h1 class="code-line" data-line-start=50 data-line-end=51 ><a id="Week_8_ForensicsSteganography_50"></a>Week 8: Forensics/Steganography</h1>
-
+<h1 class="code-line" data-line-start=64 data-line-end=65><a id="Week_6_64"></a><a href=""></a>Week 6</h1>
+<ul>
+<li class="has-line-data" data-line-start="66" data-line-end="67"><a href="https://exploit.courses/#/index">follow these tutorials after making an account on hackerlabs to access the materials</a></li>
+<li class="has-line-data" data-line-start="67" data-line-end="68">continue reading <strong>&lt;em&gt;Hacking: The Art of Exploitation&lt;/em&gt;</strong></li>
+</ul>
+<h1 class="code-line" data-line-start=70 data-line-end=71><a id="Week_7_Cryptography_70"></a><a href=""></a>Week 7: Cryptography</h1>
+<h1 class="code-line" data-line-start=71 data-line-end=72><a id="Week_8_ForensicsSteganography_71"></a><a href=""></a>Week 8: Forensics/Steganography</h1>
+</body></html>
