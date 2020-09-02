@@ -1,4 +1,4 @@
-Harvey Mudd's cybersecurity team(I will make an official site when the club starts this fall)
+Claremont Colleges cybersecurity team(I will make an official site when the club starts this fall)
 
 
 Contributions by @rboddy
