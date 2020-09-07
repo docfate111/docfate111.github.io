@@ -4,6 +4,8 @@ js is cool
 click the links to go the websites
 * Websites
   + Interactive art
+  * [Conway's game of life](https://docfate111.github.io/p5js/conway/site.html): cellular automata
+  ![Broken image](https://docfate111.github.io/images/conway.png)
   * [darkcircle](https://docfate111.github.io/p5js/circles/index.html) : follows the mouse and makes a bunch of circles in different shades from white to black
   ![Broken image](https://docfate111.github.io/images/circles.png)
   * [spacewarp](https://docfate111.github.io/p5js/spacewarp/site.html) : as the mouse moves right the stars blur as we warp speed into deep space
