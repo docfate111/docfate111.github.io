@@ -1,5 +1,10 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+#blog {
+  display: inline-block;
+  position: relative;
+  top: 36%;
+}
 
 /*
 	Telephasic by HTML5 UP
